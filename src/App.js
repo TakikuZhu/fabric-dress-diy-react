@@ -21,6 +21,15 @@ class App extends Component {
     setTimeout(function(){
       that.setState({pageState:PageStateEnum.EDITING});
     },1000)
+    console.info(window.fabric)
+    
+     //添加canvas
+     let cvs=document.createElement("canvas");
+     cvs.id="cvs";
+     document.body.prepend(cvs);
+     //设置canvas全屏
+     cvs.width = document.body.clientWidth;
+     cvs.height = document.body.clientHeight;
   }
 
   render() {
