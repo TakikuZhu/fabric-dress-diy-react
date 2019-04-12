@@ -1,0 +1,149 @@
+html,body,#root,.app{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow:hidden;
+    font: 12px sans-serif;
+}
+
+.app{
+    position: relative;
+    width: 31.25rem;
+    max-height: 67.66rem;
+    margin: auto;
+    background-image: url("./../img/tshirt.jpg");
+    background-position: center center;
+    background-size: 135%;
+    background-repeat: no-repeat;
+    transition:all 2s;
+}
+
+.app.zoom{
+    background-size: 275%;
+}
+
+.app-header{
+    height: 3.67rem;
+    padding:1.67rem 1rem 0 1rem;
+}
+
+.app-btn{
+    border: 1px solid transparent;
+    background-color: transparent; 
+    background-repeat: no-repeat;
+    outline: none
+}
+
+.app-header .app-btn{
+    width: 3.33rem;
+    height: 3.33rem;
+    background-size: 100%;
+}
+
+.app-btn.align-left{
+    float: left;
+    margin-right: 1.6rem;
+}
+.app-btn.align-center{
+    margin: auto;
+    position: absolute;
+    left: 0;
+    right: 0;
+}
+.app-btn.align-right{
+    float: right;
+    margin-left: 1.6rem;
+}
+
+.app-header-back{
+    background-image: url("./../img/Circle_Ic_Back@3x.png");   
+}
+
+.app-header-redo{
+    background-image: url("./../img/Circle_Ic_Redo@3x.png");
+}
+
+.app-header-item{
+    background-image: url("./../img/Circle_Ic_Item@3x.png");
+}
+
+.app-header-keyboard{
+    background-image: url("./../img/Circle_Ic_Keyboard@3x.png");
+}
+
+.app-header-next{
+    background-image: url("./../img/Circle_Ic_Next@3x.png");
+}
+
+.app-footer{    
+    width: 100%;
+    padding: 1.33rem;
+    box-sizing: border-box;
+    position: absolute;
+    bottom: 0
+}
+
+.app-footer .app-btn{
+    width: 4.1625rem;
+    height: 4.1625rem;
+    background-size: 100%;
+}
+
+.app-footer-font{
+    background-image: url("./../img/Circle_Ic_Font@3x.png");   
+}
+
+.app-footer-alignment{
+    background-image: url("./../img/Circle_Ic_Alignment@3x.png");
+}
+
+.app-footer-color{
+    background-image: url("./../img/Circle_Ic_Color@3x.png");
+}
+
+
+#tip{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 10px;
+    margin: 10px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    text-align: center;
+    overflow: auto;
+}
+#tip.close{
+    height: 70px;
+    overflow:hidden;
+}
+#tip .go-home{
+    position: absolute;
+    right: 20px;
+    color: white!important;
+}
+
+#tip .open-close{
+    position: absolute;
+    left: 20px;
+    color: white!important;
+}
+
+
+.layout-box {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.layout-item { 
+    width: auto;
+    margin: 10px;
+    text-align: left;
+}
+
