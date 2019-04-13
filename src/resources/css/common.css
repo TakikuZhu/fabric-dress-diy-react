@@ -29,7 +29,7 @@ html,body,#root,.app{
 
 .app{
     position: relative;
-    width: 31.25rem;
+    max-width: 31.25rem;
     max-height: 67.66rem;
     margin: auto;
     background-image: url("./../img/tshirt.jpg");
