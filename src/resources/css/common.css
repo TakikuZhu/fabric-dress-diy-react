@@ -7,10 +7,24 @@ html,body,#root,.app{
     font: 12px sans-serif;
 }
 
-canvas{
+.canvas-full-view{
+    width: 16rem;    
+    height: 18rem;
+    border: double #999;
     position: absolute;
-    border: double gray;
-    margin: auto
+    left: 0;
+    right: 0;
+    margin: auto;
+    top: 16rem;
+}
+
+.canvas-editing-view{
+    width: 100%;    
+    height: 100%;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
 }
 
 .app{

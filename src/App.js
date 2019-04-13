@@ -17,7 +17,8 @@ class App extends Component {
     return (
       <div>
         <h1>UTme!基于react+fabricjs重构的页面目录</h1>
-        <ul role="nav">
+        <ul>
+          <ol><Link to="/text-page">文本页</Link></ol>
           <ol><Link to="/text-page">文本页</Link></ol>
         </ul>
       </div>

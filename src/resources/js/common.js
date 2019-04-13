@@ -1,25 +1,37 @@
-window.onload=function(){
-    //添加canvas
-    let cvs=document.createElement("canvas");
-    cvs.id="cvs";
-    document.body.prepend(cvs);
-    //设置canvas全屏
-    cvs.width = document.body.clientWidth;
-    cvs.height = document.body.clientHeight;
-    console.info("canvas全屏,宽："+cvs.width+",高："+cvs.height)
-    fabric_cvs=new fabric.Canvas('cvs');
-    new fabric.Canvas('test');
-    console.info("fabric_cvs初始化完成")
-    
-    document.querySelector(".open-close").onclick=function(e){
-        if(tip.classList.contains("close")){
-            tip.classList.remove("close")
-        }else{
-            tip.classList.add("close")
-        }
+
+/**
+ * 初始化文本组件
+ * 
+ * @param {*} text 文本内容
+ * @param {*} fabric_cvs 画板
+ * @param {*} textAlign 文本对齐方式（外部变量，实时反应）
+ */
+function initText(text,fabric_cvs,textAlign){
+    function getTextAlign(){
+        return textAlign;
     }
-    //尝试开启Webgl滤镜
-    // tryStartWebglFilterBackend()
-    init()
+    let textbox = new window.fabric.Textbox(text, {
+        fontSize: fabric_cvs.height,
+        lockScalingFlip:true,
+        lineHeight:1,
+        cursorDelay:500,
+        padding:0,
+        textAlign:textAlign
+    });
+    textbox.onKeyUp=function(e){
+        let lineWidth=this.measureLine(0).width;
+        if(lineWidth>fabric_cvs.width){
+            this.fontSize=this.fontSize*fabric_cvs.width/lineWidth
+        }
+        this.textAlign=getTextAlign();
+        this.center()
+    }
+    fabric_cvs.add(textbox).setActiveObject(textbox);        
+
+    textbox.center()
+    textbox.enterEditing()
+
+    return textbox;
 }
 
+export default {initText}
