@@ -7,6 +7,12 @@ html,body,#root,.app{
     font: 12px sans-serif;
 }
 
+canvas{
+    position: absolute;
+    border: double gray;
+    margin: auto
+}
+
 .app{
     position: relative;
     width: 31.25rem;
@@ -25,7 +31,7 @@ html,body,#root,.app{
 
 .app-header{
     height: 3.67rem;
-    padding:1.67rem 1rem 0 1rem;
+    padding:0.67rem 0.67rem 0 0.67rem;
 }
 
 .app-btn{
@@ -39,7 +45,19 @@ html,body,#root,.app{
     width: 3.33rem;
     height: 3.33rem;
     background-size: 100%;
+    margin: 0.5rem;
 }
+
+.header-left{
+    float: left;
+}
+
+.header-right{
+    float: right;
+    max-width: 8.67rem;
+    text-align: right;
+}
+
 
 .app-btn.align-left{
     float: left;
@@ -54,6 +72,7 @@ html,body,#root,.app{
 .app-btn.align-right{
     float: right;
     margin-left: 1.6rem;
+    margin-bottom: 1.6rem;
 }
 
 .app-header-back{
@@ -100,6 +119,10 @@ html,body,#root,.app{
 
 .app-footer-color{
     background-image: url("./../img/Circle_Ic_Color@3x.png");
+}
+
+.app-footer-zoom-plus{
+    background-image: url("./../img/Circle_Ic_Enlarge@3x.png");
 }
 
 
