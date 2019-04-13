@@ -23,6 +23,9 @@ function initText(text,fabric_cvs,textAlign){
         if(lineWidth>fabric_cvs.width){
             this.fontSize=this.fontSize*fabric_cvs.width/lineWidth
         }
+        if(lineWidth<this.width){
+            this.width=lineWidth;
+        }
         this.textAlign=getTextAlign();
         this.center()
     }

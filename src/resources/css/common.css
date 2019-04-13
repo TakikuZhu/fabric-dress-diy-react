@@ -46,6 +46,10 @@ html,body,#root,.app{
 .app-header{
     height: 3.67rem;
     padding:0.67rem 0.67rem 0 0.67rem;
+    position: absolute;
+    left: 0;
+    right: 0;
+    z-index: 1;
 }
 
 .app-btn{
@@ -114,7 +118,10 @@ html,body,#root,.app{
     padding: 1.33rem;
     box-sizing: border-box;
     position: absolute;
-    bottom: 0
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
 }
 
 .app-footer .app-btn{
